@@ -1,19 +1,13 @@
-name: Workflow de exemplo
+name: Workflow Cria Artefato
 
 on:
   push:
-  
-env:
-  VARIAVEL_1: Vagner Silva
-  VARIAVEL_2: São Paulo
 
 jobs:
 
   checkout_code:
     name: Faz checkout do Nome
     runs-on: ubuntu-latest
-    env:
-      VARIAVEL_JOB: 39
       
     steps:
     - name: Checkout repositório
