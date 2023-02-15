@@ -1,24 +1,38 @@
-name: Imprime data atual
+nome: Imprime data atual
 
-on:
-  push:
+em:
+  empurrar:
   
-jobs:
+empregos:
   imprime_data_ubuntu:
-    name: Imprime data atual - Ubuntu
-    runs-on: ubuntu-latest
+    nome: Imprime data atual - Ubuntu
+    runs-on: ubuntu-mais recente
     
-    steps:
-      - name: Imprime data atual
-        run: date
+    passos:
+      - nome: Imprime data atual
+        executar: data
   
-  imprime_data_ubuntu2:
-    name: Imprime data atual - Ubuntu2
-    runs-on: ubuntu-latest
-    needs :
-      - imprime_data_ubuntu
-      - imprime_data_macos
-      - imprime_data_windows
-    steps:
-      - name: Imprime data atual
-        run: date
+  imprime_data_windows:
+    nome: Imprime data atual - Windows
+    runs-on: windows-latest
+    
+    passos:
+      - nome: Imprime data atual
+        executar: data
+        
+  imprime_data_macos:
+    nome: Imprime data atual - MacOS
+    runs-on: macos-mais recente
+    
+    passos:
+      - nome: Imprime data atual
+        executar: data
+        
+  imprime_data_final:
+    nome: Imprimir dados - trabalho final
+    runs-on: ubuntu-mais recente
+    necessidades: [imprime_data_ubuntu, imprime_data_windows, imprime_data_macos]
+    
+    passos:
+      - nome: Imprime data atual
+        executar: data
