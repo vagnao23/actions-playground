@@ -10,10 +10,10 @@ env:
 jobs:
 
   checkout_code:
-    name: Faz checkout do codigo
+    name: Faz checkout do Nome
     runs-on: ubuntu-latest
     env:
-      VARIAVEL_JOB: 33
+      VARIAVEL_JOB: 39
       
     steps:
     - name: Checkout repositório
